@@ -11,8 +11,9 @@ def load_cards(filepath):
     with open(filepath, 'r') as f:
         return json.load(f)
 
-# open the file and parse the JSON
+# assign the parsed json data to data
 data = load_cards('me-capitals.json')
+
 # initialize total as the length of the cards array
 total = len(data["cards"])
 
@@ -27,6 +28,7 @@ def ask_question(card):
     else:
         return False
 
+# function for printing message depending on whether user was correct
 def answer_message(is_correct):
     if is_correct:
         print(f"Correct! Current score: {score}/{total}")
@@ -34,6 +36,7 @@ def answer_message(is_correct):
         print("Incorrect! The correct answer was", i["a"])
         print(f"Current score: {score}/{total}")
 
+# function for pritning end message depending on score
 def end_message():
     if score / total < 0.5:
         end_message = "You need more practice!"
