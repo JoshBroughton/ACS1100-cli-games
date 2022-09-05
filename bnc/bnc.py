@@ -18,7 +18,7 @@ computer_role = roles[randint(0, 2)]
 # initialize the game loop control Boolean
 is_playing = True
 
-# continue playing the game until is_palyer is set to false
+# continue playing the game until is_palying is set to false
 while is_playing:
     player_role = input("Bear, Ninja, or Cowboy? > ")
     #prompt the user for input until they enter a valid role
